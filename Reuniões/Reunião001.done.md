@@ -1,4 +1,4 @@
-# 🍼 Reunião de Planejamento do Site para o Chá de Fraldas
+# 🍼 Reunião de Planejamento do Site para o Chá de Fraldas (07 Nov 2024)
 
 Nesta reunião, abordamos o layout e a disposição dos componentes do site para o chá de fraldas, com o objetivo de proporcionar uma experiência agradável e intuitiva para os convidados.
 
@@ -41,8 +41,7 @@ O design do pop-up utiliza um esquema de cores que remete ao tema do chá de fra
 
 ## ✅ Trabalhos Pendentes
 
-- [ ] **Decidir ordem das páginas** (07/11)
+- [X] **Decidir ordem das páginas** (07/11)
 - [ ] **Decidir estilo do Sumário** (09/11)
 - [ ] **Finalizar primeiro protótipo do Popup (Funcional)** (11/11)
 - [ ] **Wireframe Inicial** (14/11)
-- [ ] **Adicionar Página de "Local e Horário"** (07/11)
