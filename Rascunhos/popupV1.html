@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmação de Presença</title>
+
+    <style>
+      /* styles.css */
+
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Estilo do conteúdo principal do site */
+      .site-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .open-modal-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #8b4513; /* Marrom */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .open-modal-btn:hover {
+        background-color: #a0522d;
+      }
+
+      /* Modal Overlay */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: #f5f5dc; /* Bege */
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .modal-content h2 {
+        color: #8b4513; /* Marrom */
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
+
+      .modal-content label {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .modal-content input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      .modal-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .confirm-btn {
+        padding: 10px 15px;
+        color: #fff;
+        background-color: #8b4513; /* Marrom */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .confirm-btn:hover {
+        background-color: #a0522d;
+      }
+
+      .decline-btn {
+        padding: 10px 15px;
+        color: #8b4513;
+        background-color: #f5f5dc; /* Bege */
+        border: 1px solid #8b4513;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .decline-btn:hover {
+        background-color: #ede6d0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Conteúdo do site -->
+    <div class="site-content">
+      <a href="../index.html" style="display: block; margin: 2rem; font-size: 2rem">Inicio</a>
+      <h1>Bem-vindo ao Chá de Fraldas!</h1>
+      <button class="open-modal-btn" onclick="openModal()">Confirme sua Presença</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-content">
+        <h2>Confirme sua Presença</h2>
+        <label for="nome">Digite seu nome</label>
+        <input type="text" id="nome" placeholder="Seu nome aqui" />
+        <div class="modal-buttons">
+          <button class="confirm-btn">Confirmar Presença</button>
+          <button class="decline-btn" onclick="closeModal()">Não comparecer</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById("modalOverlay").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modalOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
